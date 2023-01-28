@@ -1,0 +1,28 @@
+{
+  "name": "testesm",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy:list": "sls deploy list --aws-profile trackresults",
+    "deploy:dev": "NODE_ENV=development sls deploy --stage dev --aws-profile trackresults",
+    "deploy:dev:function": "NODE_ENV=development sls deploy function --stage dev --function server --aws-profile trackresults",
+    "deploy:prod": "NODE_ENV=production sls deploy --stage prod --aws-profile trackresults",
+    "deploy:prod:function": "NODE_ENV=production sls deploy function --stage prod --function server --aws-profile trackresults",
+    "start": "node -r ts-node/register --loader ts-node/esm ./index.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "source-map-support": "^0.5.21"
+  },
+  "devDependencies": {
+    "serverless": "^3.27.0",
+    "serverless-ignore": "^0.2.1",
+    "serverless-plugin-typescript": "^2.1.4",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.4"
+  }
+}

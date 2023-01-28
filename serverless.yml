@@ -1,0 +1,19 @@
+service: testesm
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: us-west-2
+  memorySize: 128
+  timeout: 3
+  environment:
+    NODE_ENV: ${env:NODE_ENV}
+  	
+plugins:
+  - serverless-ignore
+  - serverless-plugin-typescript
+
+functions:
+  server:
+    handler: indexServerless.handler
