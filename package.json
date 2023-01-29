@@ -5,11 +5,11 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy:list": "sls deploy list --aws-profile trackresults",
-    "deploy:dev": "NODE_ENV=development sls deploy --stage dev --aws-profile trackresults",
-    "deploy:dev:function": "NODE_ENV=development sls deploy function --stage dev --function server --aws-profile trackresults",
-    "deploy:prod": "NODE_ENV=production sls deploy --stage prod --aws-profile trackresults",
-    "deploy:prod:function": "NODE_ENV=production sls deploy function --stage prod --function server --aws-profile trackresults",
+    "deploy:list": "sls deploy list --aws-profile my-profile",
+    "deploy:dev": "NODE_ENV=development sls deploy --stage dev --aws-profile my-profile",
+    "deploy:dev:function": "NODE_ENV=development sls deploy function --stage dev --function server --aws-profile my-profile",
+    "deploy:prod": "NODE_ENV=production sls deploy --stage prod --aws-profile my-profile",
+    "deploy:prod:function": "NODE_ENV=production sls deploy function --stage prod --function server --aws-profile my-profile",
     "start": "node -r ts-node/register --loader ts-node/esm ./index.ts"
   },
   "author": "",
